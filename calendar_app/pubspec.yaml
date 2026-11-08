@@ -1,0 +1,24 @@
+name: calendar_app
+description: A calendar for tasks, events and birthdays with reminders.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Pinned to the 18.x line on purpose: v19+ changed the scheduling API
+  # (named parameters, removed uiLocalNotificationDateInterpretation).
+  flutter_local_notifications: ^18.0.1
+  timezone: ^0.10.0
+  shared_preferences: ^2.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
