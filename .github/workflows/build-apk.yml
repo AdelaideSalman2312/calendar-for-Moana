@@ -12,6 +12,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: calendar_app   # <- the folder holding pubspec.yaml
     steps:
       - name: Get the code
         uses: actions/checkout@v4
@@ -38,5 +41,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: calendar-for-moana-apk
-          path: build/app/outputs/flutter-apk/app-debug.apk
+          path: calendar_app/build/app/outputs/flutter-apk/app-debug.apk   # <- same folder name at the start
           retention-days: 14
